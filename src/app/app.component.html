@@ -6,5 +6,9 @@
   </div>
 </div>
 
-<button mat-button>Registro</button>
-<button mat-button>Inicio Sesion</button>
+
+<nav>
+  <button mat-button (click)="openDialogRegister()"><a routerLink="/register/">Registro</a></button>
+  <button mat-button (click)="openDialogLogin()"><a routerLink="/register/email">Login</a></button>
+</nav>  
+<router-outlet></router-outlet>
