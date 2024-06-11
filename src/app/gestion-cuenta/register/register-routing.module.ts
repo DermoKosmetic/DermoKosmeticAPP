@@ -6,7 +6,7 @@ import { MessageComponent } from './message/message.component';
 import { MessageErrorComponent } from './message-error/message-error.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: RegisterComponent },
   { path: 'succesfully', component: MessageComponent },
   { path: 'error', component: MessageErrorComponent }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from './gestion-cuenta/register/home/home.component';
+import { RegisterComponent } from './gestion-cuenta/register/register.component';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from './gestion-cuenta/login/login.component';
 
@@ -14,7 +14,7 @@ export class AppComponent {
   constructor(private dialogRef: MatDialog) {}
 
   openDialogRegister() {
-    this.dialogRef.open(HomeComponent, {
+    this.dialogRef.open(RegisterComponent, {
       panelClass: 'custom-dialog-container',
       width: '720px', 
       height: '703px', 

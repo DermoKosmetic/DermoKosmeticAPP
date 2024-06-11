@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { RegisterComponent } from '../register.component';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  
 
 }
