@@ -49,7 +49,7 @@ form {
 }
 
 label {
-    text-align: center;
+    text-align: center; 
 }
 
 input[type="email"],
@@ -73,7 +73,6 @@ button[type="submit"] {
     cursor: pointer;
     width: 60%;
     margin-top: 30px;
-    
 }
 
 button[type="submit"]:hover {

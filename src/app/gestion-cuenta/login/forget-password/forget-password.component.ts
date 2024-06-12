@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ForgetPasswordComponent {
 
+  mostrarcontenido1: boolean = true;
+  mostrarcontenido2: boolean = false;
+
+  continuar(){
+    this.mostrarcontenido1 = false;
+    this.mostrarcontenido2 = true;
+  }
+
   
 
 }
