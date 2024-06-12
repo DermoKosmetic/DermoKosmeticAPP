@@ -1,1 +1,30 @@
-<p>login works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesión</title>
+    <link rel="stylesheet" href="login.component.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <span class="close-button" id="closeButton">X</span>
+        <h2>Inicio Sesión</h2>  
+        <form>
+            <label for="email">Tu correo:</label>
+            <input type="email" id="email" name="email" placeholder="   user123@gmail.com" required>
+
+            <label for="password">Tu contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="  *********" required>
+
+            <a href="javascript:void(0);" (click)="openDialogForget()">Recuperar Contraseña</a>
+
+
+            <button type="submit">Aceptar</button>
+        </form>
+    </div>
+
+    <script src="registro.js"></script>
+</body>
+</html>
