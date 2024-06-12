@@ -3,6 +3,7 @@ import { HomeComponent } from './gestion-cuenta/register/home/home.component';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from './gestion-cuenta/login/login.component';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

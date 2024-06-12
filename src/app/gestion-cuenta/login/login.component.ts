@@ -20,14 +20,6 @@ export class LoginComponent {
     });
   }
 
-  openDialogmensah() {
-    this.dialogRef.open(ForgetPasswordComponent, {
-      panelClass: 'custom-dialog-container',
-      width: '72px', 
-      height: '70px', 
-    });
-  }
-
-
+  
 
 }

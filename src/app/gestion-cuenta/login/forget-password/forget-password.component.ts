@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 
 @Component({
   selector: 'app-forget-password',
@@ -7,14 +7,30 @@ import { Component } from '@angular/core';
 })
 export class ForgetPasswordComponent {
 
-  mostrarcontenido1: boolean = true;
-  mostrarcontenido2: boolean = false;
+  mostrarComponente1: boolean = true;
+  mostrarComponente2: boolean = false;
+  mostrarComponente3: boolean = false;
+  mostrarComponente4: boolean = false;
 
-  continuar(){
-    this.mostrarcontenido1 = false;
-    this.mostrarcontenido2 = true;
+  constructor() { }
+
+  ngOnInit(): void {
   }
 
+  continuar() {
+    if (this.mostrarComponente1) {
+      this.mostrarComponente1 = false;
+      this.mostrarComponente2 = true;
+    } else if (this.mostrarComponente2) {
+      this.mostrarComponente2 = false;
+      this.mostrarComponente3 = true;
+    } else if (this.mostrarComponente3) {
+      this.mostrarComponente3 = false;
+      this.mostrarComponente4 = true;
+    } else {
+      
+    }
+  }
   
 
 }
