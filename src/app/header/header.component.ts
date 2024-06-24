@@ -1,12 +1,11 @@
-import {Component, ViewEncapsulation} from '@angular/core';
-import { DropdownComponent } from '../dropdown/dropdown.component';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  styleUrls: ['./header.component.css'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class HeaderComponent {
-
+  registered: boolean = false;
 }

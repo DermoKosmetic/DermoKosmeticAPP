@@ -10,22 +10,29 @@ import { MessageErrorComponent } from './message-error/message-error.component';
 })
 export class RegisterComponent {
 
-  constructor(private dialogRef: MatDialog) {}  
+  constructor(private dialogRef: MatDialog) {}
 
   openDialogMessage() {
     this.dialogRef.open(MessageComponent, {
       panelClass: 'custom-dialog-container',
-      width: '365px', 
-      height: '236px', 
+      width: '365px',
+      height: '236px',
     });
   }
 
   openDialogMessage_Error() {
     this.dialogRef.open(MessageErrorComponent, {
       panelClass: 'custom-dialog-container',
-      width: '365px', 
-      height: '236px', 
+      width: '365px',
+      height: '236px',
     });
+  }
+
+  logIn(){
+    localStorage.setItem('userToken', '0');
+    console.log(localStorage.getItem('userToken'));
+    localStorage.setItem('userToken', '1');
+    console.log(localStorage.getItem('userToken'));
   }
 
 }

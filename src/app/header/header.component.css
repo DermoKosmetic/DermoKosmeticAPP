@@ -133,6 +133,7 @@ button{
   font-weight: normal;
   color: #000;
   width: auto;
+  cursor: pointer;
 }
 
 .headerLink {
@@ -158,6 +159,7 @@ button{
   width: 25px;
   height: 25px;
   margin: 0px;
+  cursor: pointer;
 }
 
 .menu {

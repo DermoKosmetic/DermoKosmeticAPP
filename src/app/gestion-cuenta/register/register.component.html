@@ -22,10 +22,9 @@
             <label for="confirm-password">Confirma tu contraseña:</label>
             <input type="password" id="confirm-password" name="confirm-password" placeholder="  *********" required>
 
-            <button type="submit" (click)="openDialogMessage()"><a routerLink="/register/">Aceptar</a></button>
+            <button type="submit" (click)="openDialogMessage(); logIn();"><a routerLink="/register/">Aceptar</a></button>
         </form>
     </div>
 
-    <script src="registro.js"></script>
 </body>
 </html>

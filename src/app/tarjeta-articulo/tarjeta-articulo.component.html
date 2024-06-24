@@ -1,22 +1,25 @@
-<mat-card class="example-card" appearance="outlined">
-
-  <img mat-card-image class="card-imgs" src="{{articulo.mainImg}}" alt="Article image">
-  <mat-card-header>
-    <mat-card-title>{{articulo.title}}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>
-      {{articulo.description}}
-    </p>
-    <div class="footer">
-      <div class="d-flex justify-content-between w-100">
-        <div class="chip">
-          <p>{{format(articulo.publicationDate)}}</p>
+<mat-card [ngClass]="{'horizontal-card': horizontal, 'example-card': !horizontal}" appearance="outlined">
+  <div [class.d-flex]="horizontal">
+    <img mat-card-image [ngClass]="{'hor-card': horizontal, 'ver-card': !horizontal}" class="card-imgs" src="{{articulo.mainImg}}" alt="Article image">
+    <div>
+      <mat-card-header>
+        <mat-card-title>{{articulo.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{articulo.description}}
+        </p>
+        <div [ngClass]="{'horizontal-footer': horizontal, 'footer': !horizontal}">
+          <div class="d-flex justify-content-between w-100">
+            <div class="chip">
+              <p>{{format(articulo.publicationDate)}}</p>
+            </div>
+            <div class="chip blue">
+              {{articulo.type}}
+            </div>
+          </div>
         </div>
-        <div class="chip blue">
-          <mat-card-subtitle>{{articulo.type}}</mat-card-subtitle>
-        </div>
-      </div>
+      </mat-card-content>
     </div>
-  </mat-card-content>
+  </div>
 </mat-card>
