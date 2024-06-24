@@ -1,0 +1,25 @@
+<div class="code-verification-container">
+  <div class="code-verification-form">
+    <h1>Recuperar Contraseña</h1>
+    <div class="info-box">
+      <p>El enlace de recuperación se ha enviado con éxito a tu correo</p>
+      <p>¿No te llegó el enlace? <a href="#">Haz click aquí para reenviar el enlace</a></p>
+    </div>
+    <form [formGroup]="codeVerificationForm" (ngSubmit)="onSubmit()">
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Código de verificación</mat-label>
+          <input type="text" matInput formControlName="verificationCode" placeholder="Código de verificación">
+          <mat-error *ngIf="verificationCode?.hasError('required')">
+            Este campo es obligatorio.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <button type="submit" mat-raised-button color="primary" [disabled]="!codeVerificationForm.valid">Continuar</button>
+    </form>
+  </div>
+  <div class="code-verification-image">
+    <img src="assets/images/code-verification-image.jpg" alt="Code Verification Image">
+  </div>
+</div>
+<!-- loana2019@gmail.com -->

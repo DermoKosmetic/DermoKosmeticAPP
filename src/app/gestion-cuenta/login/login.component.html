@@ -1,30 +1,41 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio Sesión</title>
-    <link rel="stylesheet" href="login.component.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <span class="close-button" id="closeButton">X</span>
-        <h2>Inicio Sesión</h2>  
-        <form>
-            <label for="email">Tu correo:</label>
-            <input type="email" id="email" name="email" placeholder="   user123@gmail.com" required>
-
-            <label for="password">Tu contraseña:</label>
-            <input type="password" id="password" name="password" placeholder="  *********" required>
-
-            <a href="javascript:void(0);" (click)="openDialogForget()">Recuperar Contraseña</a>
-
-
-            <button type="submit">Aceptar</button>
+<div class="login-container">
+    <div class="login-form">
+        <h1>Inicia Sesión</h1>
+        <p>Por favor ingresa tus datos</p>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Correo electrónico</mat-label>
+                    <input type="email" matInput formControlName="email" [errorStateMatcher]="matcher" placeholder="Correo electrónico">
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                        Por favor, introduce una dirección de correo válida.
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                        Este campo es obligatorio.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Contraseña</mat-label>
+                    <input type="password" matInput formControlName="password" [errorStateMatcher]="matcher" placeholder="Contraseña">
+                    <mat-error *ngIf="passwordFormControl.hasError('required')">
+                        Este campo es obligatorio.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            
+            <div class="options">
+                <a [routerLink]="['/gestion-cuenta/forgot-password']">Olvidaste tu contraseña</a>
+            </div>
+            
+            <button type="submit" mat-raised-button color="primary" [disabled]="!loginForm.valid">Aceptar</button>
+            
+            <p>¿No tienes una cuenta? <a [routerLink]="['/gestion-cuenta/register']">Registrate</a></p>
         </form>
     </div>
-
-    <script src="registro.js"></script>
-</body>
-</html>
+    <div class="login-image">
+        <img src="assets/images/login-image.jpg" alt="Login Image">
+    </div>
+</div>

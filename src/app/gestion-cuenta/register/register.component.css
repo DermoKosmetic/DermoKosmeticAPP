@@ -1,88 +1,149 @@
-head{
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+.register-container {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-
-    
-}
-body {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    min-height: 100vh;
-    background-color: #f4f4f4;
+.example-full-width {
+  width: 400px;
+  margin-bottom: 10px;
 }
 
-.container {
-    background-color: #f4f4f4;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: none;
-    width: 400px;
+.register-form {
+  font-family: 'Poppins', sans-serif;
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centrar el contenido */
 }
 
-h2 {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
-    font-size: 24px;
+.register-form h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    margin-top: 25px;
+.register-form p {
+  margin-bottom: 20px;
+  color: #777;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+.register-form label {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 5px;
 }
 
-label {
-    text-align: center; 
+.register-form .mat-form-field {
+  width: 300px; /* Ajustar el ancho máximo de los campos de entrada */
+  margin-bottom: 20px;
 }
 
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    height: 29px;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-    background-color: #E9E6E6;
+.register-form .mat-form-field-wrapper {
+  width: 100%;
 }
 
-button[type="submit"] {
-    background-color: #80FBFF;
-    color: black;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 60%;
-    margin-top: 30px;
+.register-form .mat-mdc-form-field-flex {
+  width: 100%;
 }
 
-button[type="submit"]:hover {
-    background-color: #848484;
+.register-form .mat-input-element {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #E9E6E6;
+  width: 100%; /* Asegurarse de que el input ocupe todo el ancho del mat-form-field */
 }
 
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
+.register-form .mat-hint, .register-form .mat-error {
+  font-family: 'Poppins', sans-serif;
+}
+
+.register-form .options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px; /* Ajustar el ancho máximo */
+  margin-bottom: 20px;
+}
+
+.register-form .options a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.register-form button, .register-form .mat-raised-button {
+  font-family: 'Poppins', sans-serif;
+  width: 300px; /* Ancho del botón */
+  height: 54px; /* Altura del botón */
+  padding: 0 30px; /* Ajustar el padding */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #80FBFF;
+  color: black; /* Color de la letra cuando el botón está activo */
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.register-form button:disabled, .register-form .mat-raised-button:disabled {
+  color: grey; /* Color de la letra cuando el botón está deshabilitado */
+}
+
+.register-form .google-signin {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.register-form p {
+  text-align: center;
+}
+
+.register-form p a {
+  font-family: 'Poppins', sans-serif;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.register-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-image img {
+  width: 300px;
+  height: auto;
+}
+
+/* Estilos adicionales para Angular Material */
+.mat-form-field {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
+
+.mat-form-field div,
+.mat-form-field-wrapper,
+.mat-mdc-form-field-flex,
+.mat-mdc-text-field-wrapper,
+.mat-input-element {
+  width: 300px !important;
+}
+
+/* Estilos para mensajes de error */
+.mat-error {
+  font-family: 'Poppins', sans-serif;
+  color: red;
 }

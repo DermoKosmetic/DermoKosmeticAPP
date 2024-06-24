@@ -1,4 +1,4 @@
-.login-container {
+.code-verification-container {
   font-family: 'Poppins', sans-serif;
   display: flex;
   width: 100%;
@@ -10,12 +10,12 @@
   overflow: hidden;
 }
 
-.example-full-width{
-  width: 400px;
+.example-full-width {
+  width: 300px;
   margin-bottom: 10px;
 }
 
-.login-form {
+.code-verification-form {
   font-family: 'Poppins', sans-serif;
   flex: 1;
   padding: 40px;
@@ -25,37 +25,46 @@
   align-items: center; /* Centrar el contenido */
 }
 
-.login-form h1 {
+.code-verification-form h1 {
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.login-form p {
+.code-verification-form .info-box {
+  background-color: #e0f7fa;
+  border: 1px solid #b2ebf2;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.code-verification-form p {
   margin-bottom: 20px;
   color: #777;
 }
 
-.login-form label {
+.code-verification-form label {
   font-family: 'Poppins', sans-serif;
   margin-bottom: 5px;
 }
 
-.login-form .mat-form-field {
+.code-verification-form .mat-form-field {
   width: 300px; /* Ajustar el ancho máximo de los campos de entrada */
   margin-bottom: 20px;
 }
 
-.login-form .mat-form-field-wrapper {
+.code-verification-form .mat-form-field-wrapper {
   width: 100%;
 }
 
-.login-form .mat-mdc-form-field-flex {
+.code-verification-form .mat-mdc-form-field-flex {
   width: 100%;
 }
 
-.login-form .mat-input-element {
+.code-verification-form .mat-input-element {
   font-family: 'Poppins', sans-serif;
   padding: 10px;
   border: 1px solid #ccc;
@@ -64,24 +73,11 @@
   width: 100%; /* Asegurarse de que el input ocupe todo el ancho del mat-form-field */
 }
 
-.login-form .mat-hint, .login-form .mat-error {
+.code-verification-form .mat-hint, .code-verification-form .mat-error {
   font-family: 'Poppins', sans-serif;
 }
 
-.login-form .options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 300px; /* Ajustar el ancho máximo */
-  margin-bottom: 20px;
-}
-
-.login-form .options a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.login-form button, .login-form .mat-raised-button {
+.code-verification-form button, .code-verification-form .mat-raised-button {
   font-family: 'Poppins', sans-serif;
   width: 300px; /* Ancho del botón */
   height: 54px; /* Altura del botón */
@@ -95,36 +91,18 @@
   margin-bottom: 10px;
 }
 
-.login-form button:disabled, .login-form .mat-raised-button:disabled { /* Color de fondo cuando el botón está deshabilitado */
+.code-verification-form button:disabled, .code-verification-form .mat-raised-button:disabled {
   color: grey; /* Color de la letra cuando el botón está deshabilitado */
 }
 
-
-.login-form .google-signin {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #ccc;
-}
-
-.login-form p {
-  text-align: center;
-}
-
-.login-form p a {
-  font-family: 'Poppins', sans-serif;
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.login-image {
+.code-verification-image {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.login-image img {
+.code-verification-image img {
   width: 300px;
   height: auto;
 }

@@ -7,8 +7,7 @@
 </div>
 
 
-<nav>
-  <button mat-button (click)="openDialogRegister()"><a routerLink="/register/">Registro</a></button>
-  <button mat-button (click)="openDialogLogin()"><a routerLink="/register/email">Login</a></button>
-</nav>  
+    <button [routerLink]="['/gestion-cuenta/login']">Login</button>
+    <button [routerLink]="['/gestion-cuenta/register']">Register</button>
+
 <router-outlet></router-outlet>
