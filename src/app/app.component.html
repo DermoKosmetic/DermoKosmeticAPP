@@ -1,14 +1,5 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="text-center">¡DERMOKOSMETIC!</h1>
-    </div>
-  </div>
+<app-header></app-header>
+<div class="router-container">
+  <router-outlet></router-outlet>
 </div>
-
-
-<nav>
-  <button mat-button (click)="openDialogRegister()"><a routerLink="/register/">Registro</a></button>
-  <button mat-button (click)="openDialogLogin()"><a routerLink="/register/email">Login</a></button>
-</nav>  
-<router-outlet></router-outlet>
+<app-footer></app-footer>
