@@ -117,5 +117,6 @@ button{
   border-radius: 10px;
   height: fit-content;
   width: fit-content;
+  font-weight: normal;
   padding: 3px 10px;
 }
