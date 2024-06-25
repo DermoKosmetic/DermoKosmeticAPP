@@ -28,6 +28,16 @@
     {{articulo.content}}
     </p>
   </div>
+  <div *ngIf="resumen.length == 0" class="d-flex justify-content-center">
+    <button (click)="askGPT(articulo.content)" >{{message}}</button>
+  </div>
+  <div *ngIf="resumen.length != 0">
+    <hr>
+    <h2>Resumen via ChatGPT</h2>
+    <p class="body">
+      {{resumen}}
+    </p>
+  </div>
   <hr>
   <div>
     <h2>Escritores</h2>
