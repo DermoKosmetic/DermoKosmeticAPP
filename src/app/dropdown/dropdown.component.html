@@ -1,0 +1,9 @@
+<button class="menu greyButton" (click)="toggleMenu()">Menu</button>
+<div>
+  <div class="linkContainer"  [@dropdownAnimation]="menuState">
+    <a class="headerLink" routerLink="/landing">Propuesta</a>
+    <a class="headerLink" routerLink="/questions">Preguntas</a>
+    <a class="headerLink" routerLink="/articulos">Articulos</a>
+    <button class="greyButton register" routerLink="/register">Registro</button>
+  </div>
+</div>

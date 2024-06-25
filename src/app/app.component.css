@@ -1,0 +1,10 @@
+button{
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.router-container{
+  margin: 10px 20%;
+  padding-top: 50px;
+}

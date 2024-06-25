@@ -1,0 +1,33 @@
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: space-between;
+  min-height: 900px;
+}
+
+.article-card{
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.cat-button{
+  height: 60px;
+  padding: 5px 25px;
+  margin: auto 0;
+
+  font-size: 17px;
+}
+
+.card-width{
+  width: 400px
+}
+
+.banner{
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px;
+  border-radius: 15px 15px 5px 5px;
+  margin-bottom: 40px;
+}

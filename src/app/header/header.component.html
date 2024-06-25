@@ -1,0 +1,16 @@
+<div class="headerClass">
+  <div class="headerContainer componentClass">
+    <div class="titleContainer">
+      <img class="DKLogo" routerLink="/" src="assets/images/logo.png" alt="DermoKosmetic Logo">
+      <h1 class="DKName" routerLink="/">DermoKosmetic</h1>
+    </div>
+    <div class="linkContainer">
+      <a class="headerLink" routerLink="/landing">Propuesta</a>
+      <a class="headerLink" routerLink="/preguntas">Preguntas</a>
+      <a class="headerLink" routerLink="/articulos">Articulos</a>
+      <button *ngIf="!registered" class="greyButton register" routerLink="/register">Registro</button>
+      <button *ngIf="registered" class="greyButton register" routerLink="/user">Usuario</button>
+    </div>
+    <app-dropdown class="dropDown" />
+  </div>
+</div>
