@@ -1,0 +1,41 @@
+.example-card {
+  max-width: 400px;
+  height: 400px;
+}
+
+.horizontal-card{
+  width: 100%;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.card-imgs {
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hor-card{
+  border-top-left-radius: 15px !important;
+  border-bottom-left-radius: 15px !important;
+}
+.ver-card{
+  border-top-right-radius: 15px !important;
+  border-top-left-radius: 15px !important;
+}
+
+.footer {
+  width: 350px;
+  position: absolute;
+  bottom: 5px;
+}
+
+.horizontal-footer {
+  width: 40%;
+  position: absolute;
+  bottom: 5px;
+}
