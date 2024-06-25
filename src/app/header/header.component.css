@@ -40,6 +40,11 @@ a {
   text-decoration: none;
 }
 
+.headerLink:hover {
+  color: #6c6a6a;
+  text-decoration: none; 
+}
+
 button{
   font-size: 14px;
   font-weight: normal;
@@ -59,6 +64,8 @@ button{
 .greyButton {
   background-color: #ccc;
   transition: background-color 0.1s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .greyButton:hover{
@@ -68,8 +75,9 @@ button{
   background-color: #aaa;
 }
 .greyButton.register2 {
-  width: 120px;
-  margin-left: 0;
+  width: 130px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .greyButton {
@@ -140,8 +148,6 @@ button{
   margin-top: 0;
   margin-bottom: 0;
   justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
 }
 
 .DKName{
@@ -216,4 +222,14 @@ button{
     margin: 0px 0px;
     cursor: pointer;
   }
+}
+
+img{
+  width: 30px;
+  height: 30px;
+
+}
+
+.ojo{
+  display: flex;
 }
