@@ -86,3 +86,9 @@ button[type="submit"]:hover {
     font-size: 20px;
     cursor: pointer;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+
+}
