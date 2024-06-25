@@ -29,10 +29,8 @@ export class RegisterComponent {
   }
 
   logIn(){
-    localStorage.setItem('userToken', '0');
-    console.log(localStorage.getItem('userToken'));
-    localStorage.setItem('userToken', '1');
-    console.log(localStorage.getItem('userToken'));
+    sessionStorage.setItem('userToken', '1');
+    console.log(sessionStorage.getItem('userToken'));
   }
 
 }

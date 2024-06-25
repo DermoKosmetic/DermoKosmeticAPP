@@ -7,6 +7,12 @@
       <div>
         {{articulo.description}}
       </div>
+      <div *ngIf="loaded">
+        <button [ngClass]="{'liked' : isLiked}" class="button button-like" (click)="like()">
+          <i class="fa fa-heart"></i>
+          <span> {{likes}}</span>
+        </button>
+      </div>
       <div>
         {{articulo.publicationDate}}
         <span class="blue chip m-1">
