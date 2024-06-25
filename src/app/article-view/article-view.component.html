@@ -1,1 +1,32 @@
-<p>viewing article {{id}}!</p>
+<div *ngIf="articulo$ | async as articulo">
+  <div class="head">
+    <h1 class="text-center">
+      {{articulo.title}}
+    </h1>
+    <div class="d-flex justify-content-between">
+      <div>
+        {{articulo.description}}
+      </div>
+      <div>
+        {{articulo.publicationDate}}
+        <span class="blue chip m-1">
+          {{articulo.type}}
+        </span>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div>
+    <img src="{{articulo.mainImg}}" alt="Article image" id="myImage">
+    <p class="body" [innerHTML]="articulo.content">
+    {{articulo.content}}
+    </p>
+  </div>
+  <hr>
+  <div>
+    <h2>Escritores</h2>
+    <div *ngFor="let wrt of writers$ | async">
+      <app-writer-card [writer]="wrt"></app-writer-card>
+    </div>
+  </div>
+</div>
