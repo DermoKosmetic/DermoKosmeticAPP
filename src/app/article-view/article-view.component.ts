@@ -5,6 +5,7 @@ import {ArticuloModel} from "../models/articulo.model";
 import {EMPTY, Observable} from "rxjs";
 import {WriterModel} from "../models/writer.model";
 import {map} from "rxjs/operators";
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-article-view',
@@ -95,7 +96,7 @@ export class ArticleViewComponent implements OnDestroy{
 
   askGPT(content: string) {
     this.message = 'Generando resumen...';
-    const apiKey = 'sk-proj-8CSEhtwKdldfcgWK46DyT3BlbkFJRXvhe4lHzQh6zx27Enuw';  // Replace with your OpenAI API key
+    const apiKey = environment.openaiApiKey;  // Replace with your OpenAI API key
     const headers = new HttpHeaders().set('Authorization', `Bearer ${apiKey}`).set('Content-Type', 'application/json');
     const body = {
       model: 'gpt-3.5-turbo',
