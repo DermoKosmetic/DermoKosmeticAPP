@@ -7,6 +7,12 @@
       <div>
         {{articulo.description}}
       </div>
+      <div *ngIf="loaded">
+        <button [ngClass]="{'liked' : isLiked}" class="button button-like" (click)="like()">
+          <i class="fa fa-heart"></i>
+          <span> {{likes}}</span>
+        </button>
+      </div>
       <div>
         {{articulo.publicationDate}}
         <span class="blue chip m-1">
@@ -20,6 +26,16 @@
     <img src="{{articulo.mainImg}}" alt="Article image" id="myImage">
     <p class="body" [innerHTML]="articulo.content">
     {{articulo.content}}
+    </p>
+  </div>
+  <div *ngIf="resumen.length == 0" class="d-flex justify-content-center">
+    <button (click)="askGPT(articulo.content)" >{{message}}</button>
+  </div>
+  <div *ngIf="resumen.length != 0">
+    <hr>
+    <h2>Resumen via ChatGPT</h2>
+    <p class="body">
+      {{resumen}}
     </p>
   </div>
   <hr>
