@@ -1,6 +1,6 @@
 import {Component, OnDestroy} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {ArticuloModel} from "../models/articulo.model";
 import {EMPTY, Observable} from "rxjs";
 import {WriterModel} from "../models/writer.model";
@@ -21,6 +21,8 @@ export class ArticleViewComponent implements OnDestroy{
   loaded = false;
   likes: number = 0;
   original : boolean = false;
+  resumen = ''
+  message = 'Resumir con ChatGPT'
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {
 
@@ -75,5 +77,36 @@ export class ArticleViewComponent implements OnDestroy{
     }else{
       this.http.delete<boolean>(`https://dk.singoe.tech/api/v1/articles/like?articleId=${this.id}&userId=${userToken}`).subscribe();
     }
+  }
+
+  typeText(text: string) {
+    let index = 0;
+    this.resumen = '';
+
+    const typingInterval = setInterval(() => {
+      if (index < text.length) {
+        this.resumen += text.charAt(index);
+        index++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 10); // Adjust the typing speed here
+  }
+
+  askGPT(content: string) {
+    this.message = 'Generando resumen...';
+    const apiKey = 'sk-proj-8CSEhtwKdldfcgWK46DyT3BlbkFJRXvhe4lHzQh6zx27Enuw';  // Replace with your OpenAI API key
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${apiKey}`).set('Content-Type', 'application/json');
+    const body = {
+      model: 'gpt-3.5-turbo',
+      messages: [{ role: 'user', content: `Summarize the following content: ${content}` }],
+      temperature: 0.7
+    };
+
+    this.http.post<any>('https://api.openai.com/v1/chat/completions', body, { headers }).subscribe(response => {
+      this.typeText(response.choices[0].message.content);
+    }, error => {
+      console.error('Error generating summary:', error);
+    });
   }
 }

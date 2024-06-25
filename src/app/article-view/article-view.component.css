@@ -86,4 +86,30 @@
   color: #fefefe;
 }
 
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+p.typing {
+  position: relative;
+  overflow: hidden;
+  color: transparent;
+  animation: colorChange 2s steps(40, end) forwards;
+}
+
+p.typing::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: typing 2s steps(40, end) forwards;
+}
+
+@keyframes colorChange {
+  100% { color: black; }
+}
 
