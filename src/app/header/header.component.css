@@ -91,6 +91,22 @@ button{
 .greyButton:active {
   background-color: #aaa;
 }
+.greyButton.register2 {
+  width: 120px;
+  margin-left: 0;
+}
+
+.greyButton {
+  background-color: #ccc;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.greyButton:hover{
+  background-color: #bbb;
+}
+.greyButton:active {
+  background-color: #aaa;
+}
 
 .blueButton {
   background-color: #80FBFF;

@@ -30,4 +30,11 @@
   cursor: pointer;
   margin-bottom: 40px;
   margin-top: 10px;
+  min-width: 260px;
+}
+
+@media (max-width: 1700px){
+  .down{
+    flex-direction: column;
+  }
 }

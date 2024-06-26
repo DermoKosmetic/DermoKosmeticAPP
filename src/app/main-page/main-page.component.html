@@ -13,7 +13,7 @@
   </div>
 </div>
 <hr>
-<div class="d-flex">
+<div class="d-flex down">
   <div class="d-flex flex-column">
     <div class="sub">Articulos mas recientes</div>
     <app-tarjeta-articulo class="article-card" *ngFor="let articulo of articulos$ | async" [articulo]="articulo" [horizontal]="true" (click)="navigate(articulo.id)"></app-tarjeta-articulo>
