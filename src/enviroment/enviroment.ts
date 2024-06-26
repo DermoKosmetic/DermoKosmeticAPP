@@ -1,4 +1,4 @@
 export const environment={
     producction: false,
-    apiUrl: 'http://localhost:8080/api/v1'
+    apiUrl: 'https://dk.singoe.tech/api/v1/'
 }

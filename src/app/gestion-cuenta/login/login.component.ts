@@ -24,8 +24,8 @@ export class LoginComponent {
   openDialogForget() {
     this.dialogRef.open(ForgetPasswordComponent, {
       panelClass: 'custom-dialog-container',
-      width: '720px', 
-      height: '703px', 
+      width: '720px',
+      height: '703px',
     });
   }
 

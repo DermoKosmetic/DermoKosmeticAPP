@@ -1,6 +1,6 @@
-export interface SignUp {
-    username: string
-    password: string
-    email: string
-    profilePic: string
+export interface SignUpRequest {
+    username?: string
+    password?: string
+    email?: string
+    profilePic?: string
   }
