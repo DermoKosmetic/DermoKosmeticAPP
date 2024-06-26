@@ -1,0 +1,33 @@
+<div class="container" *ngIf="pregunta$ | async as pregunta">
+  <div class="header-section">
+    <h2>{{ pregunta.title }}</h2>
+    <p>Publicado el {{ pregunta.publicationDate }}</p>
+  </div>
+
+  <div class="detalle-pregunta">
+    <div class="pregunta-content">
+      <img src="https://via.placeholder.com/150" alt="User Image">
+      <div>
+        <p><strong>{{ pregunta.title }}</strong></p>
+        <p>{{ pregunta.content }}</p>
+      </div>
+
+      
+    </div>
+    <div class="pregunta-info">
+      <div>
+        <p class="type-question">{{ pregunta.type }}</p>
+      </div>
+      <p>Usuario: {{ pregunta.userId }}</p>
+      <p>{{ pregunta.likes }} Likes</p>
+      <p>{{ pregunta.answers }} Likes</p>
+    </div>
+  </div>
+
+  <div class="nueva-respuesta">
+    <!-- <h3>Nueva Respuesta</h3>
+    <textarea placeholder="Escribe tu respuesta aquí..."></textarea> -->
+  </div>
+  <app-answer [questionId]="pregunta.id"></app-answer>
+</div>
+<div>
