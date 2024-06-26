@@ -1,6 +1,6 @@
 <div class="blue banner">Explora</div>
 
-<div class="d-flex justify-content-between">
+<div class="d-flex flex-wrap justify-content-between">
   <app-search-chip  *ngIf="allTypes.length > 0" (fruitsChange)="handleChange($event)" [allFruits]="allTypes"></app-search-chip>
   <div class="d-flex justify-content-between align-content-center card-width">
     <button class="cat-button" (click) = "changeOrder('recent')">Recent</button>
@@ -9,7 +9,7 @@
 </div>
 </div>
 <div class="card-container">
-  <app-tarjeta-articulo class="article-card" *ngFor="let articulo of articulos$ | async" [articulo]="articulo" (click)="navigate(articulo)"></app-tarjeta-articulo>
+  <app-tarjeta-articulo class="article-card" [class.w-100]="horizontal" *ngFor="let articulo of articulos$ | async" [articulo]="articulo" [horizontal]="this.horizontal" (click)="navigate(articulo)"></app-tarjeta-articulo>
 </div>
 <div class="d-flex justify-content-center w-100">
   <div class="d-flex justify-content-between card-width">

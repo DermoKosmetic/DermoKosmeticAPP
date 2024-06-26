@@ -1,9 +1,9 @@
-import {Component, Input} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import { PaginableArticuloModel } from "../models/paginable-articulo.model";
 
 import { HttpClient } from '@angular/common/http';
 import {MiniArticuloModel} from "../models/mini-articulo.model";
-import {EMPTY, Observable, toArray} from "rxjs";
+import {EMPTY, Observable} from "rxjs";
 import { map } from 'rxjs/operators';
 import {Router} from "@angular/router";
 
@@ -23,6 +23,7 @@ export class CatalogoArticulosComponent{
   orderBy: string = 'recent';
   types: string[] = [];
   allTypes: string[] = [];
+  horizontal = false;
 
   constructor(private http: HttpClient, private router: Router) {
     this.http.get<string[]>('https://dk.singoe.tech/api/v1/articles/types').subscribe(data => {
@@ -30,6 +31,12 @@ export class CatalogoArticulosComponent{
       this.allTypes = data;
     });
     this.fetchArticulos();
+    this.horizontal = window.innerWidth < 1400;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event : any) {
+    this.horizontal = event.target.innerWidth < 1400;
   }
 
   fetchArticulos(){
@@ -67,4 +74,7 @@ export class CatalogoArticulosComponent{
     console.log(articulo);
     this.router.navigate(['/articulos/', articulo.id]);
   }
+
+  protected readonly innerWidth = innerWidth;
+  protected readonly window = window;
 }
