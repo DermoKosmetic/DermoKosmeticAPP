@@ -8,7 +8,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DropdownComponent} from "./dropdown/dropdown.component";
 import {FooterComponent} from "./footer/footer.component";
-
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import {FooterComponent} from "./footer/footer.component";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
     provideAnimationsAsync()

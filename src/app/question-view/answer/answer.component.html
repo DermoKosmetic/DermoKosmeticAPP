@@ -1,0 +1,16 @@
+<div class="respuestas">
+  <div *ngFor="let respuesta of respuestas" class="respuesta">
+    <p>{{ respuesta.content }}</p>
+    <p><small>Publicado el {{ respuesta.publicationDate }}</small></p>
+    <p>{{ respuesta.likes }} Likes</p>
+  </div>
+</div>
+
+<div class="nueva-respuesta">
+  <textarea [(ngModel)]="nuevaRespuesta" placeholder="Escribe tu respuesta aquí..."></textarea>
+  <div class="div-button">
+    <button (click)="enviarRespuesta()" class="nuevo-boton">Responder</button>
+
+  </div>
+    <p *ngIf="respuestaCreada" class="confirmacion">¡Respuesta creada con éxito!</p>
+</div>

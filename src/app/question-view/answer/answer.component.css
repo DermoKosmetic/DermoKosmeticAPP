@@ -1,0 +1,56 @@
+.confirmacion {
+  color: green;
+  font-weight: bold;
+}
+
+/* Estilos para la sección de nueva respuesta */
+.nueva-respuesta {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #F8F5F5;
+  border-radius: 5px;
+}
+
+.nueva-respuesta h3 {
+  margin-bottom: 10px;
+}
+
+.nueva-respuesta div{
+  align-items: center;
+}
+
+.nueva-respuesta textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.nueva-respuesta textarea:focus {
+  border-color: #00aaff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+}
+
+.nueva-respuesta button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.div-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; 
+}
+
+.nueva-respuesta button:hover {
+  background-color: #353c41; 
+}

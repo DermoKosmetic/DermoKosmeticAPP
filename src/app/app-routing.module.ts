@@ -8,7 +8,10 @@ const routes: Routes = [
   { path: 'login', loadChildren: () => import('./gestion-cuenta/login/login.module').then(m => m.LoginModule) },
   { path: 'forget_password', loadChildren: () => import('./gestion-cuenta/login/forget-password/forget-password.module').then(m => m.ForgetPasswordModule) },
   { path: 'articulos', loadChildren: () => import('./catalogo-articulos/catalogo-articulos.module').then(m => m.CatalogoArticulosModule) },
-  { path: 'article-view', loadChildren: () => import('./article-view/article-view.module').then(m => m.ArticleViewModule) }
+  { path: 'article-view', loadChildren: () => import('./article-view/article-view.module').then(m => m.ArticleViewModule) },
+  { path: 'preguntas', loadChildren: () => import('./catalogo-preguntas/catalogo-preguntas.module').then(m => m.CatalogoPreguntasModule)},
+  { path: 'preguntas/:id', loadChildren: () => import('./question-view/question-view.module').then(m => m.QuestionViewModule) }
+
 ];
 
 @NgModule({

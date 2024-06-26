@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="header-container">
+    <div class="header-section">
+      <h2>Preguntas</h2>
+      <p>Sección de preguntas de nuestros usuarios</p>
+      <a class="ask-button">Preguntar</a>
+    </div>
+  </div>
+  
+
+  <div class="d-flex justify-content-between">
+    <!-- Botón desplegable para los tipos -->
+    <app-search-chip *ngIf="allTypes.length > 0" (fruitsChange)="handleChange($event)" [allFruits]="allTypes"></app-search-chip>
+    
+    <div class="sort-buttons">
+      <button class="sort-button" (click)="changeOrder('recent')">Recent</button>
+      <button class="sort-button" (click)="changeOrder('likes')">Likes</button>
+      <button class="sort-button" (click)="changeOrder('comments')">Comments</button>
+    </div>
+  </div>
+
+  <div class="questions">
+    <div class="question" *ngFor="let p of preguntas$ | async" (click)="navigate(p)">
+      <p>{{p.title}}<br><small>{{p.id}}, {{p.publicationDate}}</small></p>
+      <p>{{p.answers}} Respuestas<br>{{p.likes}} Likes</p>
+    </div>
+  </div>
+
+  <div class="paginado-prev-next">
+    <div class="d-flex justify-content-center w-100">
+      <div class="d-flex justify-content-between card-width">
+        <button (click)="changePage(-1)" [disabled]="pageNum === 0">Prev</button>
+        <div class="p-1">
+          {{pageNum + 1}}/{{maxPages}}
+        </div>
+        <button (click)="changePage(1)" [disabled]="pageNum === maxPages - 1">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer></footer>
