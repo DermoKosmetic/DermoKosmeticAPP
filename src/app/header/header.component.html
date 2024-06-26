@@ -1,4 +1,6 @@
 <div class="headerClass">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <div class="headerContainer componentClass">
     <div class="titleContainer">
       <img class="DKLogo" routerLink="/" src="assets/images/logo.png" alt="DermoKosmetic Logo">
@@ -11,7 +13,5 @@
       <button *ngIf="!registered" class="greyButton register" routerLink="/register">Registro</button>
       <button *ngIf="!registered" class="greyButton register2" routerLink="/login">Iniciar Sesion</button>
       <button *ngIf="registered" class="greyButton register" routerLink="/user">Usuario</button>
-    </div>
-    <app-dropdown class="dropDown" />
   </div>
 </div>

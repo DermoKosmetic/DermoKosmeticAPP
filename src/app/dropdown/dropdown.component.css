@@ -26,24 +26,28 @@
   .linkContainer {
     padding: 0 15vw;
   }
-  
+
 }
 
 @media screen and (max-width: 650px) {
   .linkContainer {
-    padding: 0 5vw;
+    padding: 0 0;
   }
-  
-}
 
-@media screen and (max-width: 450px) {
   .headerLink {
-    font-size: 14px;
-    margin: 0 10px;
+    margin: 0;
   }
 
   .register {
-    margin: 0 10px;
+    margin: 0;
   }
-  
+
+}
+
+@media screen and (max-width: 450px) {
+
+  .headerLink {
+    font-size: 14px;
+  }
+
 }

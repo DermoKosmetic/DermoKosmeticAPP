@@ -20,7 +20,8 @@
 }
 
 .card-width{
-  width: 400px
+  width: 400px;
+  min-width: 400px;
 }
 
 .banner{

@@ -1,5 +1,5 @@
 .example-card {
-  max-width: 400px;
+  width: 400px;
   height: 400px;
 }
 
@@ -14,7 +14,6 @@
 
 .card-imgs {
   width: 100%;
-  max-width: 400px;
   height: 200px;
   object-fit: cover;
 }
@@ -22,20 +21,23 @@
 .hor-card{
   border-top-left-radius: 15px !important;
   border-bottom-left-radius: 15px !important;
+  max-width: 50%;
 }
 .ver-card{
   border-top-right-radius: 15px !important;
   border-top-left-radius: 15px !important;
+  max-width: 400px;
 }
 
 .footer {
-  width: 350px;
+  width: 375px;
   position: absolute;
   bottom: 5px;
+  left: 5px;
 }
 
 .horizontal-footer {
-  width: 40%;
+  width: 45%;
   position: absolute;
   bottom: 5px;
 }
